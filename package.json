@@ -1,0 +1,40 @@
+{
+  "name": "observability-demo",
+  "version": "1.0.0",
+  "description": "Node.js Observability Demo using OpenTelemetry, Prometheus and Grafana",
+  "main": "index.js",
+  "scripts": {
+    "start": "APPLICATION_NAME=checkout-service node --import ./src/platform/observability/telemetry.js src/app.js",
+    "dev": "APPLICATION_NAME=checkout-service nodemon --exec \"node --import ./src/platform/observability/telemetry.js\" src/app.js"
+  },
+  "private": true,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "pnpm@>=11.10.0",
+      "onFail": "download"
+    }
+  },
+  "type": "module",
+  "dependencies": {
+    "@opentelemetry/api": "^1.9.1",
+    "@opentelemetry/api-logs": "^0.221.0",
+    "@opentelemetry/exporter-logs-otlp-http": "^0.221.0",
+    "@opentelemetry/exporter-metrics-otlp-http": "^0.221.0",
+    "@opentelemetry/exporter-trace-otlp-http": "^0.221.0",
+    "@opentelemetry/resources": "^2.10.0",
+    "@opentelemetry/sdk-logs": "^0.221.0",
+    "@opentelemetry/sdk-metrics": "^2.10.0",
+    "@opentelemetry/sdk-trace-base": "^2.10.0",
+    "@opentelemetry/semantic-conventions": "^1.43.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "pino": "^10.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
