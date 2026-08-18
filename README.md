@@ -197,6 +197,15 @@ with `node --import ./src/platform/observability/telemetry.js src/app.js`.
 
 ## Configuration
 
+`.env` is git-ignored. Copy the template to get started:
+
+```bash
+cp .env.example .env
+```
+
+Every value in it is also a built-in default, so the app runs against the
+docker compose stack even with no `.env` at all.
+
 Set in `.env`:
 
 | Variable | Value | Purpose |
