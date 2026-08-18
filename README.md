@@ -10,6 +10,19 @@ from a metric spike, into the trace, down to the individual log lines.
 
 ---
 
+## Demo
+
+![Checkout Service observability dashboard in Grafana](docs/dashboard-screenshot.png)
+
+A Grafana dashboard over the metrics this service emits — request rate, total
+requests, error rate, and p50/p95 checkout latency.
+
+📹 **[Walkthrough recording](docs/grafana-prometheus-opentelemetry.mov)** (25 MB) —
+Grafana, Prometheus and OpenTelemetry in action. GitHub cannot play `.mov`
+inline, so the link downloads the file.
+
+---
+
 ## Architecture
 
 ```
